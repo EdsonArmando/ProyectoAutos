@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Menu Administrador</h2>
+@if (Session["nombreUsuario"] != null)
+{
+    <h2>Bienvenido @Session["nombreUsuario"]</h2>
+}
+else
+{
+    <h2>Debe de iniciar sesion</h2>
+}
+
+<div class="row">
+    <div class="col-sm-6 col-md4">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>Usuarios</h3>
+                <p>El administrador puede ver a todos los usuarios</p>
+                <p>@Html.ActionLink("Usuarios", "Index", "Usuario", new { area = "" }, new { @class = "btn btn-primary" })</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md4">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>Autos</h3>
+                <p>El administrador puede ver a todos los autos</p>
+                <p>@Html.ActionLink("Autos", "Index", "Automovil", new { area = "" }, new { @class = "btn btn-primary" })</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+

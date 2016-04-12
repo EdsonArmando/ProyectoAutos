@@ -1,0 +1,60 @@
+﻿@model IEnumerable<AutoVentas.Models.Automovil>
+
+@{
+    ViewBag.Title = "Autos";
+}
+
+<h2>Autos</h2>
+
+<p>
+    @Html.ActionLink("Ingresar nuevo auto", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           Marca
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precio)
+        </th>
+        <th>
+           Imagen
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.marca.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precio)
+        </td>
+        @if (item.archivos.Any(ar => ar.tipo == AutoVentas.Models.FileType.Image))
+        {
+            <td>
+                <img width="50" height="50" src="~/Archivo/Archivo?id=@item.archivos.First(f => f.tipo == AutoVentas.Models.FileType.Image).idArchivo" alt="imagen" />
+            </td>
+        }
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.idAutomovil }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.idAutomovil }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.idAutomovil })
+        </td>
+    </tr>
+}
+
+</table>
