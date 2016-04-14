@@ -1,18 +1,15 @@
 ﻿@model IEnumerable<AutoVentas.Models.Automovil>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Autos";
 }
 
-<h2>Index</h2>
+<h2>Autos</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.marca.nombre)
+           Marca
         </th>
         <th>
             @Html.DisplayNameFor(model => model.modelo)
@@ -22,6 +19,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.precio)
+        </th>
+        <th>
+           Imagen
         </th>
         <th></th>
     </tr>
@@ -40,10 +40,15 @@
         <td>
             @Html.DisplayFor(modelItem => item.precio)
         </td>
+        @if (item.archivos.Any(ar => ar.tipo == AutoVentas.Models.FileType.Image))
+        {
+            <td>
+                <img width="50" height="50" src="~/Archivo/Archivo?id=@item.archivos.First(f => f.tipo == AutoVentas.Models.FileType.Image).idArchivo" alt="imagen" />
+            </td>
+        }
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idAutomovil }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idAutomovil }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idAutomovil })
+            @Html.ActionLink("Detalles", "Details", new { id=item.idAutomovil }) 
+           
         </td>
     </tr>
 }

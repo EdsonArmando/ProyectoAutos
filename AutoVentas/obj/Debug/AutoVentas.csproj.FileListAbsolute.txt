@@ -86,3 +86,4 @@ C:\Users\Armando\Documents\Visual Studio 2015\Projects\AutoVentas\AutoVentas\bin
 C:\Users\Armando\Documents\Visual Studio 2015\Projects\AutoVentas\AutoVentas\bin\es\System.Web.Mvc.resources.dll
 C:\Users\Armando\Documents\Visual Studio 2015\Projects\AutoVentas\AutoVentas\obj\Debug\AutoVentas.Migrations.DB_AUTOS.resources
 C:\Users\Armando\Documents\Visual Studio 2015\Projects\AutoVentas\AutoVentas\obj\Debug\AutoVentas.csproj.GenerateResource.Cache
+C:\Users\Armando\Documents\Visual Studio 2015\Projects\AutoVentas\AutoVentas\obj\Debug\AutoVentas.csprojResolveAssemblyReference.cache

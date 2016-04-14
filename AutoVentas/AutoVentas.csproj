@@ -99,8 +99,11 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Color.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\image1.jpe" />
+    <Content Include="fonts\image2.jpe" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -124,7 +127,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArchivoController.cs" />
     <Compile Include="Controllers\AutomovilController.cs" />
-    <Compile Include="Controllers\AutomovilsController.cs" />
     <Compile Include="Controllers\CuentaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -167,11 +169,7 @@
     <Content Include="Views\Automovil\Details.cshtml" />
     <Content Include="Views\Automovil\Edit.cshtml" />
     <Content Include="Views\Automovil\Index.cshtml" />
-    <Content Include="Views\Automovils\Create.cshtml" />
-    <Content Include="Views\Automovils\Delete.cshtml" />
-    <Content Include="Views\Automovils\Details.cshtml" />
-    <Content Include="Views\Automovils\Edit.cshtml" />
-    <Content Include="Views\Automovils\Index.cshtml" />
+    <Content Include="Views\Automovil\IndexUsuario.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -181,7 +179,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Archivo\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201604080126015_DB_AUTOS.resx">
