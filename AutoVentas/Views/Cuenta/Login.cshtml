@@ -2,15 +2,17 @@
 @{
     ViewBag.Title = "Login";
 }
-
-<h2>Login</h2>
+<link rel="stylesheet" type="text/css" href="~/Content/Color.css" media="screen" />
+<div class="horizontal">
+    <h2>Auto Ventas</h2>
+</div>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Usuario</h4>
+        <h4>Inicia sesion</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @if (ViewBag.mensaje != null)
@@ -21,9 +23,17 @@
                 </div>
             </div>
         }
-
+    </div>
+    <div class="form-horizontal">
+            <div id="center">
+        <div class="horizontal divPadre">
+            <div class="vertical">
+                <img class="img-circle" src="~/fonts/image3.jpe" alt="thumb01" whith="140" height="140" />
+            </div>
+        </div>
+   
         <div class="form-group">
-            @Html.LabelFor(model => model.correo, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.correo, htmlAttributes: new { @class = "control-label col-md-3" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.correo)
                 @Html.ValidationMessageFor(model => model.correo)
@@ -31,26 +41,27 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.contraseña, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.contraseña, htmlAttributes: new { @class = "control-label col-md-4" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.contraseña)
                 @Html.ValidationMessageFor(model => model.contraseña)
             </div>
         </div>
-
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Login" class="btn btn-default" />
             </div>
         </div>
-    </div>
+                    <div class="col-md-offset-0 col-md-9">
+                        <p>@Html.ActionLink("Registrarme", "Registro", "Cuenta", new { area = "" }, new { @class = "btn btn-default" })</p>
+                    </div>
+               
+       </div>
+       </div>
+    <hr />
 }
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 
-
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
-<script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-
-
-@Html.ActionLink("Registrarme", "Registro", "Cuenta")
-
+  

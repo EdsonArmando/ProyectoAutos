@@ -12,15 +12,13 @@ else
 {
     <h2>Debe de iniciar sesion</h2>
 }
-            <div class="row">
-                <div class="col-sm-6 col-md4">
-                    <div class="thumbnail">
-                        <div class="caption">
-                            <h3>Autos</h3>
-                            <p>El usuario puede ver a todos los autos</p>
-                            <p>@Html.ActionLink("Autos", "IndexUsuario", "Automovil", new { area = "" }, new { @class = "btn btn-primary" })</p>
-                        </div>
-                    </div>
+               <div class="container">
+                 <div class="row">
+                      <div class="col-lg-4">
+                        <img class="img-circle" src="~/fonts/image4.jpe" alt="thumb01" whith="140" height="140" />
+                        <h3>Autos</h3>
+                        <p>El administrador puede ver a todos los autos</p>
+                        <p>@Html.ActionLink("Autos", "IndexUsuario", "Automovil", new { area = "" }, new { @class = "btn btn-primary" })</p>
                 </div>
-            </div>
-        
+        </div>
+    </div>
