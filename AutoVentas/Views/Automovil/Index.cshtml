@@ -14,13 +14,13 @@
     @foreach (var item in Model)
     {
 
-        <div class="col-sm-4 col-md-3">
+        <div class="col-sm-4 col-md-4">
             <div class="thumbnail">
                 @if (item.archivos.Any(ar => ar.tipo == AutoVentas.Models.FileType.Image))
                 {
                         <img src="~/Archivo/Archivo?id=@item.archivos.First(f => f.tipo == AutoVentas.Models.FileType.Image).idArchivo" alt="imagen" />   
                 }
-                <div class="caption color">
+                <div class="caption">
                     <h3>@Html.DisplayFor(valor => item.marca.nombre)</h3>
                     <p>
                         <strong>Modelo: </strong>@Html.DisplayFor(valor => item.modelo) <br />
@@ -31,20 +31,17 @@
                         <strong>Color: </strong>@Html.DisplayFor(valor => item.color) <br />
                         <strong>Precio: </strong>@Html.DisplayFor(valor => item.precio) <br />
                     </p>
-                    @if (Session["rol"].Equals(2))
-                    {//Estudiante rol 2
+                   
                         <p>@Html.ActionLink("Solicitar", "Create", "Pedido", new { idLibro = item.idAutomovil }, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })</p>
-                    }
-                    @if (Session["rol"].Equals(1))
-                    {//Administrador rol 1
+                
+                  
                         <p>
                             <hr />
                             @Html.ActionLink("Editar", "Edit", new { id = item.idAutomovil }) |
                             @Html.ActionLink("Detalles", "Details", new { id = item.idAutomovil }) |
                             @Html.ActionLink("Eliminar", "Delete", new { id = item.idAutomovil })
                         </p>
-                    }
-
+      
                 </div>
             </div>
         </div>

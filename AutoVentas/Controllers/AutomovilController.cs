@@ -32,6 +32,11 @@ namespace AutoVentas.Controllers
             var automovil = db.automovil.Include(a => a.marca);
             return View(automovil.ToList());
         }
+        public ActionResult IndexVisitantes()
+        {
+            var automovil = db.automovil.Include(a => a.marca);
+            return View(automovil.ToList());
+        }
 
         public ActionResult IndexAutosUsuario()
         {

@@ -1,69 +1,104 @@
-﻿@model AutoVentas.Models.Usuario 
+﻿@model AutoVentas.Models.Usuario
 
 @{
     ViewBag.Title = "Login";
 }
-<link rel="stylesheet" type="text/css" href="~/Content/Color.css" media="screen" />
-<div class="horizontal">
-    <h2>Auto Ventas</h2>
-</div>
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-
-    <div class="form-horizontal">
-        <h4>Inicia sesion</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @if (ViewBag.mensaje != null)
-        {
-            <div class="form group">
-                <div class="alert-success">
-                    @ViewBag.mensaje
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Autoventas Car</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Color.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Color.css" media="screen" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    @Html.ActionLink("Autos", "IndexVisitantes", "Automovil", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav"></ul>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a>
+                                @Session["nombreUsuario"]
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        }
+        </div>
     </div>
-    <div class="form-horizontal">
-            <div id="center">
-        <div class="horizontal divPadre">
-            <div class="vertical">
-                <img class="img-circle" src="~/fonts/image3.jpe" alt="thumb01" whith="140" height="140" />
-            </div>
-        </div>
-   
-        <div class="form-group">
-            @Html.LabelFor(model => model.correo, htmlAttributes: new { @class = "control-label col-md-3" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.correo)
-                @Html.ValidationMessageFor(model => model.correo)
-            </div>
-        </div>
+    <div class="horizontal">
+        <h2>Auto Ventas</h2>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.contraseña, htmlAttributes: new { @class = "control-label col-md-4" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.contraseña)
-                @Html.ValidationMessageFor(model => model.contraseña)
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Login" class="btn btn-default" />
-            </div>
-        </div>
-                    <div class="col-md-offset-0 col-md-9">
-                        <p>@Html.ActionLink("Registrarme", "Registro", "Cuenta", new { area = "" }, new { @class = "btn btn-default" })</p>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Inicia sesion</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @if (ViewBag.mensaje != null)
+            {
+                <div class="form group">
+                    <div class="alert-success">
+                        @ViewBag.mensaje
                     </div>
-               
-       </div>
-       </div>
-    <hr />
-}
+                </div>
+            }
+        </div>
+        <div class="form-horizontal">
+            <div id="center">
+                <div class="horizontal divPadre">
+                    <div class="vertical">
+                        <img class="img-circle" src="~/fonts/image3.jpe" alt="thumb01" whith="140" height="140" />
+                    </div>
+                </div>
 
-        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-        <script src="~/Scripts/jquery.validate.min.js"></script>
-        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.correo, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.correo)
+                        @Html.ValidationMessageFor(model => model.correo)
+                    </div>
+                </div>
 
-  
+                <div class="form-group">
+                    @Html.LabelFor(model => model.contraseña, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.contraseña)
+                        @Html.ValidationMessageFor(model => model.contraseña)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Login" class="btn btn-default" />
+                    </div>
+                </div>
+                <div class="col-md-offset-0 col-md-9">
+                    <p>@Html.ActionLink("Registrarme", "Registro", "Cuenta", new { area = "" }, new { @class = "btn btn-default" })</p>
+                </div>
+
+            </div>
+        </div>
+        <hr />
+    }
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
+
