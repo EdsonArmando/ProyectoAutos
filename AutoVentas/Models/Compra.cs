@@ -17,7 +17,9 @@ namespace AutoVentas.Models
         public DateTime fecha { get; set; }
         public int idUsuario { get; set; }
         public int idAutomovil { get; set; }
+       
         public virtual Usuario usuario { get; set; }
         public virtual Automovil automovil { get; set; }
+        
     }
 }

@@ -17,7 +17,7 @@
                 {
                         <img src="~/Archivo/Archivo?id=@item.archivos.First(f => f.tipo == AutoVentas.Models.FileType.Image).idArchivo" alt="imagen" />   
                 }
-                <div class="caption">
+                <div class="caption color">
                     <h3>@Html.DisplayFor(valor => item.marca.nombre)</h3>
                     <p>
                         <strong>Modelo: </strong>@Html.DisplayFor(valor => item.modelo) <br />
@@ -29,7 +29,7 @@
                         <strong>Precio: </strong>@Html.DisplayFor(valor => item.precio) <br />
                     </p>
                    
-                        <p>@Html.ActionLink("Comprar", "Create", "Compra", new { idAutomovil = item.idAutomovil }, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })</p>
+                        <p>@Html.ActionLink("Reservar", "Create", "Compra", new { idAutomovil = item.idAutomovil }, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })</p>
                 </div>
             </div>
         </div>

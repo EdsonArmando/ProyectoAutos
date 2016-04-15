@@ -14,6 +14,18 @@ namespace AutoVentas.Models
         [Display(Name = "Modelo")]
         [Required(ErrorMessage = "El campo modelo es obligatorio.")]
         public String modelo { get; set; }
+        [Display(Name = "Combustible")]
+        [Required(ErrorMessage = "El campo combustible es obligatorio.")]
+        public String combustible { get; set; }
+        [Display(Name = "Cilindrada")]
+        [Required(ErrorMessage = "El campo cilindrada es obligatorio.")]
+        public String cilindrada { get; set; }
+        [Display(Name = "No. Motor")]
+        [Required(ErrorMessage = "El campo No. Motor es obligatorio.")]
+        public String motor { get; set; }
+        [Display(Name = "Pais Manufacturación")]
+        [Required(ErrorMessage = "El campo Manufacturación es obligatorio.")]
+        public String manufacturacion { get; set; }
         [Display(Name = "Color")]
         [Required(ErrorMessage = "El campo color es obligatorio.")]
         public String color { get; set; }

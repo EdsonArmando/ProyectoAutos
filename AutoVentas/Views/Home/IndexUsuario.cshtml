@@ -11,14 +11,25 @@
 else
 {
     <h2>Debe de iniciar sesion</h2>
-}
-               <div class="container">
-                 <div class="row">
-                      <div class="col-lg-4">
-                        <img class="img-circle" src="~/fonts/image4.jpe" alt="thumb01" whith="140" height="140" />
-                        <h3>Autos</h3>
-                        <p>El administrador puede ver a todos los autos</p>
-                        <p>@Html.ActionLink("Autos", "IndexUsuario", "Automovil", new { area = "" }, new { @class = "btn btn-primary" })</p>
-                </div>
+} <div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="img-circle" src="~/fonts/image4.jpe" alt="thumb01" whith="140" height="140" />
+            <h3>Autos</h3>
+            <p>El cliente puede ver los autos</p>
+            <p>@Html.ActionLink("Autos", "IndexUsuario", "Automovil", new { area = "" }, new { @class = "btn btn-primary" })</p>
+        </div>
+        <div class="col-lg-4">
+            <img class="img-circle" src="~/fonts/image7.jpe" alt="thumb01" whith="140" height="140" />
+            <h3>Reservas</h3>
+            <p>El cliente puede hacer reservas</p>
+            <p>@Html.ActionLink("Reservas", "IndexReserva", "Automovil", new { area = "" }, new { @class = "btn btn-primary" })</p>
+        </div>
+        <div class="col-lg-4">
+            <img class="img-circle" src="~/fonts/image8.jpe" alt="thumb01" whith="140" height="140" />
+            <h3>Contactanos</h3>
+            <p>Información acerca de nuestra empresa</p>
+            <p>@Html.ActionLink("Contactanos", "About", "Home", new { area = "" }, new { @class = "btn btn-primary" })</p>
         </div>
     </div>
+</div>

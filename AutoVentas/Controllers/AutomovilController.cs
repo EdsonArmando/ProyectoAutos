@@ -21,12 +21,25 @@ namespace AutoVentas.Controllers
             var automovil = db.automovil.Include(a => a.marca);
             return View(automovil.ToList());
         }
+
         public ActionResult IndexUsuario()
         {
             var automovil = db.automovil.Include(a => a.marca);
             return View(automovil.ToList());
         }
+        public ActionResult IndexReserva()
+        {
+            var automovil = db.automovil.Include(a => a.marca);
+            return View(automovil.ToList());
+        }
 
+        public ActionResult IndexAutosUsuario()
+        {
+            List<Usuario> usuarios = new List<Usuario>();
+            usuarios.Add(db.usuario.Find(Session["IDUsuario"]));
+            var automovil = db.automovil.Include(a => a.marca);
+            return View(automovil.ToList());
+        }
         // GET: Automovil/Details/5
         public ActionResult Details(int? id)
         {
@@ -54,7 +67,7 @@ namespace AutoVentas.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idAutomovil,modelo,color,precio,idMarca")] Automovil automovil, HttpPostedFileBase archivo)
+        public ActionResult Create([Bind(Include = "idAutomovil,modelo,combustible,cilindrada,motor,manufacturacion,color,precio,idMarca")] Automovil automovil, HttpPostedFileBase archivo)
         {
             if (ModelState.IsValid)
             {
@@ -109,7 +122,7 @@ namespace AutoVentas.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             var automovil = db.automovil.Find(id);
-            if (TryUpdateModel(automovil, "", new string[] { "idAutomovil,modelo,color,precio,idMarca" }))
+            if (TryUpdateModel(automovil, "", new string[] { "idAutomovil,modelo,combustible,cilindrada,motor,manufacturacion,color,precio,idMarca" }))
             {
                 try
                 {

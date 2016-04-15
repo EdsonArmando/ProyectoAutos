@@ -1,0 +1,42 @@
+﻿@model IEnumerable<AutoVentas.Models.Compra>
+
+@{
+    ViewBag.Title = "Compra de autos";
+}
+
+<h2>Compra de autos</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.automovil.modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usuario.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.automovil.modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usuario.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha)
+        </td>
+        <td>
+           
+            @Html.ActionLink("Detalles", "Details", new { id=item.idCompra }) 
+         
+        </td>
+    </tr>
+}
+
+</table>

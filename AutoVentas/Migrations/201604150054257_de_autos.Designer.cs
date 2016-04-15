@@ -7,13 +7,13 @@ namespace AutoVentas.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class DB_AUTOS : IMigrationMetadata
+    public sealed partial class de_autos : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(DB_AUTOS));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(de_autos));
         
         string IMigrationMetadata.Id
         {
-            get { return "201604080126015_DB_AUTOS"; }
+            get { return "201604150054257_de_autos"; }
         }
         
         string IMigrationMetadata.Source

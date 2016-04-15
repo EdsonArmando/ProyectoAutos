@@ -107,6 +107,9 @@
     <Content Include="fonts\image3.jpe" />
     <Content Include="fonts\image4.jpe" />
     <Content Include="fonts\image5.jpe" />
+    <Content Include="fonts\image6.jpe" />
+    <Content Include="fonts\image7.jpe" />
+    <Content Include="fonts\image8.jpe" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -130,6 +133,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArchivoController.cs" />
     <Compile Include="Controllers\AutomovilController.cs" />
+    <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\CuentaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MarcaController.cs" />
@@ -137,9 +141,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201604080126015_DB_AUTOS.cs" />
-    <Compile Include="Migrations\201604080126015_DB_AUTOS.Designer.cs">
-      <DependentUpon>201604080126015_DB_AUTOS.cs</DependentUpon>
+    <Compile Include="Migrations\201604150054257_de_autos.cs" />
+    <Compile Include="Migrations\201604150054257_de_autos.Designer.cs">
+      <DependentUpon>201604150054257_de_autos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Archivo.cs" />
@@ -168,17 +172,26 @@
     <Content Include="Views\Usuario\Details.cshtml" />
     <Content Include="Views\Usuario\Edit.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
-    <Content Include="Views\Automovil\Create.cshtml" />
     <Content Include="Views\Automovil\Delete.cshtml" />
     <Content Include="Views\Automovil\Details.cshtml" />
     <Content Include="Views\Automovil\Edit.cshtml" />
     <Content Include="Views\Automovil\Index.cshtml" />
-    <Content Include="Views\Automovil\IndexUsuario.cshtml" />
     <Content Include="Views\Marca\Create.cshtml" />
     <Content Include="Views\Marca\Delete.cshtml" />
     <Content Include="Views\Marca\Details.cshtml" />
     <Content Include="Views\Marca\Edit.cshtml" />
     <Content Include="Views\Marca\Index.cshtml" />
+    <Content Include="Views\Automovil\IndexUsuario.cshtml" />
+    <Content Include="Views\Compra\Create.cshtml" />
+    <Content Include="Views\Compra\Delete.cshtml" />
+    <Content Include="Views\Compra\Details.cshtml" />
+    <Content Include="Views\Compra\Edit.cshtml" />
+    <Content Include="Views\Compra\Index.cshtml" />
+    <Content Include="Views\Compra\IndexAdmin.cshtml" />
+    <Content Include="Views\Automovil\IndexReserva.cshtml" />
+    <Content Include="Views\Automovil\Create.cshtml" />
+    <Content Include="Views\Automovil\IndexVisitantes.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -190,8 +203,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604080126015_DB_AUTOS.resx">
-      <DependentUpon>201604080126015_DB_AUTOS.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201604150054257_de_autos.resx">
+      <DependentUpon>201604150054257_de_autos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

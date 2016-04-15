@@ -16,7 +16,7 @@ else
 <div class="container">
     <div class="row">
         <div class="col-lg-4">
-                    <img class="img-circle" src="~/fonts/image1.jpe" alt="thumb01" whith="140" height="140" />
+                    <img class="img-circle circular" src="~/fonts/image1.jpe" alt="thumb01" whith="140" height="140" />
                     <h3>Autos</h3>
                     <p>El administrador puede ver a todos los autos</p>
                     <p>@Html.ActionLink("Autos", "Index", "Automovil", new { area = "" }, new { @class = "btn btn-primary" })</p>
@@ -28,6 +28,18 @@ else
             <p>El administrador puede ver a todos los usuarios</p>
             <p>@Html.ActionLink("Usuarios", "Index", "usuario", new { area = "" }, new { @class = "btn btn-primary" })</p>
         </div>   
+        <div class="col-lg-4">
+            <img class="img-circle" src="~/fonts/image6.jpe" alt="thumb01" whith="140" height="140" />
+            <h3>Compras</h3>
+            <p>El administrador puede ver a todos las compras</p>
+            <p>@Html.ActionLink("Compras", "IndexAdmin", "compra", new { area = "" }, new { @class = "btn btn-primary" })</p>
+        </div>  
+        <div class="col-lg-4">
+            <img class="img-circle" src="~/fonts/image7.jpe" alt="thumb01" whith="140" height="140" />
+            <h3>Reservas</h3>
+            <p>El cliente puede hacer reservas</p>
+            <p>@Html.ActionLink("Reservas", "IndexReserva", "Automovil", new { area = "" }, new { @class = "btn btn-primary" })</p>
+        </div> 
         <div class="col-lg-4">
             <img class="img-circle" src="~/fonts/image5.jpe" alt="thumb01" whith="140" height="140" />
             <h3>Marcas</h3>

@@ -27,6 +27,7 @@ namespace AutoVentas.Controllers
             {
                 Session["nombreUsuario"] = usr.nombre;
                 Session["idUsuario"] = usr.idUsuario;
+                Session["rol"] = usr.rol.idRol;
                 return VerificarSesion();
             }
             else
@@ -91,6 +92,7 @@ namespace AutoVentas.Controllers
         {
             Session.Remove("IDUsuario");
             Session.Remove("nombreUsuario");
+            Session.Remove("rol");
             return RedirectToAction("Login");
         }
 
